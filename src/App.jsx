@@ -18,6 +18,10 @@ function App() {
     alert('AI ASSISTANT clicked');
   };
 
+  const handleAddForm = () => {
+    alert('Add Form clicked');
+  };
+
   return (
     <div className="app-container">
       <button onClick={toggleSidebar}>Toggle Sidebar</button>
@@ -29,6 +33,7 @@ function App() {
             <button className="login-button">Login</button>
             <button className="logout-button" onClick={handleLogout}>Logout</button>
             <button onClick={handleAiAssistant}>AI ASSISTANT</button>
+            <button style={{ backgroundColor: 'green', color: 'white' }} onClick={handleAddForm}>ADD FORM</button>
           </div>
         </header>
         <main className="main-content">
