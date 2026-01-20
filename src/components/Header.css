@@ -1,14 +1,17 @@
-```css
+/* src/components/Header.css */
 .add-form-button {
-  background-color: green;
-  color: white; /* Optional: Make the text white for better contrast */
+  background-color: yellow;
+  color: black; /* Optional: Set text color for better contrast */
   padding: 10px 20px; /* Adjust padding as needed */
   border: none; /* Remove default border */
-  cursor: pointer; /* Indicate it's clickable */
+  cursor: pointer; /* Change cursor on hover */
   border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 .header {
-  /* Existing header styles */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0; /* Optional: Add a background color to the header */
 }
-```
