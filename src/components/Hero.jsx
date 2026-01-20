@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <header className="hero-section">
             <h1 className="hero-title">
-                Build Faster.<br />
+                <b>Build Faster.</b><br />
                 Dream Bigger.
             </h1>
             <p className="hero-subtitle">
