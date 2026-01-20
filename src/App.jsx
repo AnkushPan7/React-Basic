@@ -25,6 +25,7 @@ function App() {
             <button className="login-button">Login</button>
             <button className="logout-button" onClick={handleLogout}>Logout</button>
             <button style={{ backgroundColor: 'yellow' }}>HELLO</button>
+            <button className="register-button">REGISTER HERE</button>
           </div>
         </header>
         <main className="main-content">
