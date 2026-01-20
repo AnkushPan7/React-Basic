@@ -10,8 +10,11 @@ function App() {
   };
 
   const handleLogout = () => {
-    // Placeholder for actual logout logic (e.g., clearing tokens, redirecting)
     alert('Logout clicked');
+  };
+
+  const handleAiAssistant = () => {
+    alert('AI ASSISTANT clicked');
   };
 
   return (
@@ -24,7 +27,7 @@ function App() {
           <div className="button-container">
             <button className="login-button">Login</button>
             <button className="logout-button" onClick={handleLogout}>Logout</button>
-            <button style={{ backgroundColor: 'yellow' }}>HELLO</button>
+            <button onClick={handleAiAssistant}>AI ASSISTANT</button>
           </div>
         </header>
         <main className="main-content">
