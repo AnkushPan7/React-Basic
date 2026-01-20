@@ -16,6 +16,7 @@ function App() {
       <div className="content">
         <header className="main-header">
           <h1>Basic App</h1>
+          <button className="login-button">Login</button>
         </header>
         <main className="main-content">
           <p>Main content area.</p>
