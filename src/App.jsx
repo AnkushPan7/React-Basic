@@ -21,8 +21,10 @@ function App() {
       <div className="content">
         <header className="main-header">
           <h1>Basic App</h1>
-          <button className="login-button">Login</button>
-          <button className="logout-button" onClick={handleLogout}>Logout</button>
+          <div className="button-container">
+            <button className="login-button">Login</button>
+            <button className="logout-button" onClick={handleLogout}>Logout</button>
+          </div>
         </header>
         <main className="main-content">
           <p>Main content area.</p>
