@@ -30,6 +30,7 @@ function App() {
             <button onClick={handleAiAssistant}>AI ASSISTANT</button>
           </div>
         </header>
+        <hr />
         <main className="main-content">
           <p>Main content area.</p>
         </main>
