@@ -3,26 +3,19 @@ import './App.css';
 import Sidebar from './components/Sidebar';
 
 function App() {
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
-  const toggleSidebarVisibility = () => {
+  const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
-  };
-
-  const toggleSidebarCollapse = () => {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
   };
 
   return (
     <div className="app-container">
-      <Sidebar isVisible={isSidebarVisible} isCollapsed={isSidebarCollapsed} toggleCollapse={toggleSidebarCollapse} />
-      <div className={`content ${!isSidebarVisible ? 'full-width' : ''}`}>
+      <button onClick={toggleSidebar}>Toggle Sidebar</button>
+      {isSidebarVisible && <Sidebar />}
+      <div className="content">
         <header className="main-header">
           <h1>Basic App</h1>
-          <button onClick={toggleSidebarVisibility}>
-            {isSidebarVisible ? 'Hide Sidebar' : 'Show Sidebar'}
-          </button>
         </header>
         <main className="main-content">
           <p>Main content area.</p>
