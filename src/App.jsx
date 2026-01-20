@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 function App() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
+  };
+
+  const toggleFooter = () => {
+    setIsFooterVisible(!isFooterVisible);
   };
 
   const handleLogout = () => {
@@ -32,10 +38,10 @@ function App() {
         </header>
         <main className="main-content">
           <p>Main content area.</p>
+          <button onClick={toggleFooter}>Footer</button>
+          {isFooterVisible && <Footer />}
         </main>
-        <footer className="main-footer">
-          <p>&copy; 2024 My App</p>
-        </footer>
+        
       </div>
     </div>
   );
