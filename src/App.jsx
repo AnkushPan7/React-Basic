@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="main-header">
-        <h1>React Basic</h1>
+        <h1>Basic App</h1>
       </header>
     </div>
   );
