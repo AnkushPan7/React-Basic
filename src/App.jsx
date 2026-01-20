@@ -19,6 +19,8 @@ function App() {
         <Header />
         <main className="main-content">
           <p>Main content area.</p>
+          <hr />
+          <p>More main content area.</p>
         </main>
         <Footer />
       </div>
