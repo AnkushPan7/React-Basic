@@ -13,6 +13,10 @@
   height: 100vh;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .sidebar.collapsed {
@@ -54,6 +58,12 @@
 .content {
   flex: 1;
   padding: 1rem;
+  margin-left: 250px; /* Adjust based on sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+.content.collapsed {
+  margin-left: 60px; /* Adjust based on collapsed sidebar width */
 }
 
 .main-header {
@@ -65,4 +75,19 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-text);
+}
+
+.toggle-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.toggle-button:hover {
+  background-color: #2980b9;
 }

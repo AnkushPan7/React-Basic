@@ -1,63 +1,33 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import './Sidebar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome, faInfoCircle, faCog, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const Sidebar = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleCollapse = () => {
-    setCollapsed(!collapsed);
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
+const Sidebar = ({ isOpen, onClose }) => {
   return (
-    <>
-      {/* Mobile Menu Toggle Button */}
-      <button className="mobile-menu-button" onClick={toggleMobileMenu}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-
-      {/* Sidebar */}
-      <div className={`sidebar ${collapsed ? 'collapsed' : ''} ${isMobileMenuOpen ? 'open' : ''}`}>
-        {/* Close Button (Mobile) */}
-        <button className="close-button" onClick={toggleMobileMenu}>
-          <FontAwesomeIcon icon={faTimes} />
+    <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
+      <div className="sidebar-header">
+        <h3>Navigation</h3>
+        <button className="close-button" onClick={onClose}>
+          &times;
         </button>
-
-        {/* Collapse Toggle Button */}
-        <button className="collapse-button" onClick={toggleCollapse}>
-          <FontAwesomeIcon icon={collapsed ? faBars : faTimes} />
-        </button>
-
-        {/* Navigation Links */}
-        <ul className="nav-links">
-          <li>
-            <Link to="/" onClick={isMobileMenuOpen ? toggleMobileMenu : null}>
-              <FontAwesomeIcon icon={faHome} className="icon" />
-              <span>Home</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={isMobileMenuOpen ? toggleMobileMenu : null}>
-              <FontAwesomeIcon icon={faInfoCircle} className="icon" />
-              <span>About</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/settings" onClick={isMobileMenuOpen ? toggleMobileMenu : null}>
-              <FontAwesomeIcon icon={faCog} className="icon" />
-              <span>Settings</span>
-            </Link>
-          </li>
-        </ul>
       </div>
-    </>
+      <ul className="sidebar-menu">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/services">Services</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+      <div className="sidebar-footer">
+        <p>&copy; 2024 My App</p>
+      </div>
+    </div>
   );
 };
 

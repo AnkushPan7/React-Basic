@@ -1,137 +1,74 @@
 .sidebar {
   width: 250px;
   height: 100vh;
-  background-color: #2c3e50;
+  background-color: #333;
   color: #fff;
-  padding: 20px;
-  transition: width 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Ensure it's above other content */
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  transition: transform 0.3s ease-in-out;
 }
 
-.sidebar.collapsed {
-  width: 60px;
+.sidebar.hidden {
+  transform: translateX(-250px); /* Hide the sidebar off-screen */
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  color: #eee;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .sidebar a {
+  color: #ddd;
   text-decoration: none;
-  color: #fff;
   display: block;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .sidebar a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.sidebar a.active {
-  background-color: rgba(255, 255, 255, 0.2);
-  font-weight: bold;
-}
-
-.sidebar .toggleButton {
-  background: none;
-  border: none;
+.toggleButton {
+  position: fixed;
+  top: 20px;
+  left: 270px; /* Position next to the sidebar when visible */
+  background-color: #444;
   color: #fff;
-  font-size: 20px;
+  border: none;
+  padding: 10px 15px;
   cursor: pointer;
-  padding: 0;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align to the left */
-  width: 100%;
+  border-radius: 5px;
+  z-index: 1001; /* Ensure it's above the sidebar */
+  transition: left 0.3s ease-in-out;
 }
 
-.sidebar .toggleButton:focus {
-  outline: none;
+.toggleButton.sidebarHidden {
+  left: 20px; /* Position at the edge when sidebar is hidden */
 }
 
-.sidebar .logo {
-  text-align: center;
-  margin-bottom: 30px;
+/* Optional: Style for the content area to avoid overlap */
+.content {
+  margin-left: 250px; /* Adjust based on sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
 }
 
-.sidebar .logo img {
-  width: 80%;
-  max-width: 150px; /* Adjust as needed */
-  height: auto;
-}
-
-.collapsedText {
-  display: none;
-}
-
-.sidebar.collapsed .collapsedText {
-  display: none;
-}
-
-.sidebar.collapsed .logo {
-  text-align: center;
-}
-
-.sidebar.collapsed .logo img {
-  max-width: 40px; /* Adjust as needed */
-}
-
-.sidebar.collapsed a span {
-  display: none;
-}
-
-.sidebar a span {
-  margin-left: 10px;
-}
-
-.sidebar.collapsed .toggleButton span {
-  display: none;
-}
-
-.sidebar .menuItem {
-  display: flex;
-  align-items: center;
-}
-
-.sidebar .menuItem svg {
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-}
-
-.sidebar.collapsed .menuItem svg {
-  margin-right: 0;
-  margin: 0 auto;
-  display: block;
-}
-
-.sidebar.collapsed .menuItem {
-  justify-content: center;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 999; /* Below the sidebar but above other content */
-}
-
-.hidden {
-    display: none;
+.content.sidebarHidden {
+  margin-left: 0;
 }
