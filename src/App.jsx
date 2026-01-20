@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 function App() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -33,9 +34,7 @@ function App() {
         <main className="main-content">
           <p>Main content area.</p>
         </main>
-        <footer className="main-footer">
-          <p>&copy; 2024 My App</p>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
