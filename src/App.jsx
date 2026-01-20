@@ -14,6 +14,10 @@ function App() {
     alert('Logout clicked');
   };
 
+  const handleClickMe = () => {
+    alert('Click Me button clicked!');
+  };
+
   return (
     <div className="app-container">
       <button onClick={toggleSidebar}>Toggle Sidebar</button>
@@ -25,6 +29,7 @@ function App() {
             <button className="login-button">Login</button>
             <button className="logout-button" onClick={handleLogout}>Logout</button>
             <button className="hello-button" style={{ backgroundColor: 'green' }}>Hello</button>
+            <button onClick={handleClickMe}>Click Me</button>
           </div>
         </header>
         <main className="main-content">
