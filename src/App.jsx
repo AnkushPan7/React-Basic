@@ -9,6 +9,11 @@ function App() {
     setIsSidebarVisible(!isSidebarVisible);
   };
 
+  const handleLogout = () => {
+    // Placeholder for actual logout logic (e.g., clearing tokens, redirecting)
+    alert('Logout clicked');
+  };
+
   return (
     <div className="app-container">
       <button onClick={toggleSidebar}>Toggle Sidebar</button>
@@ -17,6 +22,7 @@ function App() {
         <header className="main-header">
           <h1>Basic App</h1>
           <button className="login-button">Login</button>
+          <button className="logout-button" onClick={handleLogout}>Logout</button>
         </header>
         <main className="main-content">
           <p>Main content area.</p>
