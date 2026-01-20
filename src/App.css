@@ -129,3 +129,18 @@
   cursor: pointer;
   border-radius: 5px;
 }
+
+.test-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.test-button:hover {
+  background-color: #0056b3;
+}
