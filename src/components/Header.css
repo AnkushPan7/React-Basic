@@ -1,0 +1,14 @@
+```css
+.add-form-button {
+  background-color: green;
+  color: white; /* Optional: Make the text white for better contrast */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Indicate it's clickable */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.header {
+  /* Existing header styles */
+}
+```
