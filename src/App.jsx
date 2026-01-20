@@ -28,6 +28,7 @@ function App() {
         </header>
         <main className="main-content">
           <p>Main content area.</p>
+          <button>test</button>
         </main>
         <footer className="main-footer">
           <p>&copy; 2024 My App</p>
