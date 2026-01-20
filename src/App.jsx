@@ -24,7 +24,7 @@ function App() {
           <div className="button-container">
             <button className="login-button">Login</button>
             <button className="logout-button" onClick={handleLogout}>Logout</button>
-            <button className="hello-button" style={{ backgroundColor: 'green' }}>Hello</button>
+            <button style={{ backgroundColor: 'yellow' }}>HELLO</button>
           </div>
         </header>
         <main className="main-content">

@@ -1,1 +1,1 @@
-Add the paths to node.exe and npm.cmd (usually located in C:\Program Files\nodejs) to the system's PATH environment variable.
+Ensure that the directory containing node.exe and npm.cmd is included in the system's PATH environment variable. This allows the system to find these executables from any directory.
