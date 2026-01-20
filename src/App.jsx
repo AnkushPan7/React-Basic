@@ -28,7 +28,7 @@ function App() {
           </div>
         </header>
         <main className="main-content">
-          <p>Main content area.</p>
+          <p>Main content area. <b>hello</b></p>
         </main>
         <footer className="main-footer">
           <p>&copy; 2024 My App</p>
