@@ -17,6 +17,10 @@ function App() {
     alert('AI ASSISTANT clicked');
   };
 
+  const handleClickkkk = () => {
+    alert('clickkkk button clicked');
+  };
+
   return (
     <div className="app-container">
       <button onClick={toggleSidebar}>Toggle Sidebar</button>
@@ -28,6 +32,7 @@ function App() {
             <button className="login-button">Login</button>
             <button className="logout-button" onClick={handleLogout}>Logout</button>
             <button onClick={handleAiAssistant}>AI ASSISTANT</button>
+            <button onClick={handleClickkkk}>clickkkk</button>
           </div>
         </header>
         <main className="main-content">
