@@ -1,25 +1,13 @@
-```javascript
-import React, { useState } from 'react';
-import Sidebar from './components/Sidebar'; // Adjust path if necessary
+import React from 'react';
+import './App.css';
 
 function App() {
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
-
-  const toggleSidebar = () => {
-    setIsSidebarVisible(!isSidebarVisible);
-  };
-
   return (
-    <div style={{ display: 'flex' }}>
-      {isSidebarVisible && <Sidebar style={{ backgroundColor: 'green', width: '200px', height: '100vh' }} />}
-      <div style={{ flex: 1, padding: '20px' }}>
-        {/* Main content of your application */}
-        <h1>Kanban Board</h1>
-        <button onClick={toggleSidebar}>Toggle Sidebar</button>
-      </div>
+    <div className="App">
+      <button style={{ backgroundColor: 'green', color: 'black', marginRight: '10px' }}>hello</button>
+      <button style={{ backgroundColor: 'red', color: 'white' }}>hello</button>
     </div>
   );
 }
 
 export default App;
-```
