@@ -1,0 +1,4 @@
+// Example assuming CSS styling:
+.sidebar {
+  background-color: lightyellow;
+}
