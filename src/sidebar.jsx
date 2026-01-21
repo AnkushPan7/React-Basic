@@ -10,7 +10,7 @@ const Sidebar = (props) => {
 
   const sidebarStyle = {
     ...props.style,
-    backgroundColor: 'orange',
+    backgroundColor: 'blue',
     width: collapsed ? '50px' : '200px',
     height: '100vh',
     transition: 'width 0.3s ease',
