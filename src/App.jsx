@@ -3,8 +3,8 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
 import Sidebar from './components/Sidebar';
+import HomePage from './pages/HomePage';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
