@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -8,7 +9,9 @@ function Header() {
       <button style={{ backgroundColor: 'green', borderRadius: '100px', color: 'white', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
         ADD APPUNIK FORM
       </button>
-      <button style={{ backgroundColor: 'green', color: 'white', borderRadius: '100px' }}>hello</button>
+      <Link to="/home">
+        <button style={{ backgroundColor: 'green', color: 'white', borderRadius: '100px' }}>hello</button>
+      </Link>
     </header>
   );
 }
