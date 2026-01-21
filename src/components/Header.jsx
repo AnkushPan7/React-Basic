@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  const handleDemoClick = () => {
+    alert('hello user');
+  };
+
   return (
     <header style={{ backgroundColor: 'lightblue', padding: '20px', textAlign: 'center' }}>
       <h1>Welcome to My App</h1>
@@ -12,6 +16,9 @@ function Header() {
       <Link to="/home">
         <button style={{ backgroundColor: 'green', color: 'white', borderRadius: '100px' }}>hello</button>
       </Link>
+      <button onClick={handleDemoClick} style={{ backgroundColor: 'blue', color: 'white', borderRadius: '100px', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
+        Demo Button
+      </button>
     </header>
   );
 }
