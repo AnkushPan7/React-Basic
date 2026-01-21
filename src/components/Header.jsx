@@ -2,10 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  const handleClick = () => {
+    alert('You clicked the button!');
+  };
+
   return (
     <header style={{ backgroundColor: 'lightblue', padding: '20px', textAlign: 'center' }}>
       <h1>Welcome to My App</h1>
       <p>This is a header with some dummy text.</p>
+      <button onClick={handleClick} style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', border: 'none', cursor: 'pointer', borderRadius: '5px' }}>
+        Click Me
+      </button>
       <button style={{ backgroundColor: 'green', borderRadius: '100px', color: 'white', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
         ADD APPUNIK FORM
       </button>
