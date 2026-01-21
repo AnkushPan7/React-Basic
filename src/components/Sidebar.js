@@ -1,14 +1,13 @@
-// Example using inline styles:
-<div style={{ backgroundColor: 'darkgreen' }}>
-  {/* Sidebar content */}
-</div>
+// Example fix, adjust based on actual component structure
+import React from 'react';
 
-// Example using CSS classes (assuming you have a CSS file):
-.sidebar {
-  background-color: darkgreen;
-}
+const Sidebar = () => {
+  return (
+    <div style={{ backgroundColor: 'yellow', width: '200px', height: '100vh' }}>
+      {/* Sidebar content */}
+      Sidebar Content
+    </div>
+  );
+};
 
-// Example using styled-components:
-const SidebarContainer = styled.div`
-  background-color: darkgreen;
-`;
+export default Sidebar;

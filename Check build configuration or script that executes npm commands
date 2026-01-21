@@ -1,0 +1,1 @@
+Inspect the build script or configuration file (e.g., in your CI/CD pipeline or build server settings) to ensure the working directory is correctly set to the React project's root directory.  If the path is hardcoded, correct it. If it's dynamically generated, debug the logic that generates the path.

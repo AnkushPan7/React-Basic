@@ -1,0 +1,15 @@
+// Example assuming you are using CSS Modules
+.sidebar {
+  background-color: yellow;
+  /* Other styles */
+}
+
+// Or if using inline styles
+<div style={{ backgroundColor: 'yellow' }}>
+  {/* Sidebar content */}
+</div>
+
+// Or if using styled-components
+const SidebarContainer = styled.div`
+  background-color: yellow;
+`;
