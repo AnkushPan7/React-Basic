@@ -1,1 +1,1 @@
-Ensure that the directory containing node.exe and npm.cmd is included in the system's PATH environment variable. This allows the system to find these executables from any directory.
+Add the paths to the Node.js installation directory (e.g., C:\Program Files\nodejs) and the npm global modules directory (e.g., C:\Users\YourUsername\AppData\Roaming\npm) to the PATH environment variable.

@@ -1,12 +1,13 @@
-// src/components/Header.js
+// Assuming Header.js is the correct file
 import React from 'react';
 
 function Header() {
   return (
     <header>
-      <h1><b>Kanban Board</b></h1>
-      <button style={{ backgroundColor: 'yellow' }}>ADD APPUNIK FORM</button>
-      <button style={{ backgroundColor: 'lightgreen' }}>test</button>
+      <h1>Your Header Title</h1>
+      <button style={{ backgroundColor: 'green', borderRadius: '100px', color: 'white', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
+        ADD APPUNIK FORM
+      </button>
     </header>
   );
 }
