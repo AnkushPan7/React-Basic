@@ -1,0 +1,17 @@
+// Example implementation in a React component
+import React from 'react';
+
+function Header() {
+  const handleClick = () => {
+    alert('Hello from the button!');
+  };
+
+  return (
+    <header>
+      <h1>Your Header</h1>
+      <button onClick={handleClick}>Click Me</button>
+    </header>
+  );
+}
+
+export default Header;

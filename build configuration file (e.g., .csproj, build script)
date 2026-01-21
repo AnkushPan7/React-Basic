@@ -1,1 +1,1 @@
-Correct the working directory path if it's incorrect.
+Ensure that the working directory for npm commands is set to 'C:\Users\Ankush Panchal\Desktop\Vibe-kanban\Harsh-Kanban-board\backend-dotnet\Kanban.Api\..\repos\React-Basic' or the directory containing the package.json file.
