@@ -6,6 +6,7 @@ function Header() {
     <header>
       <h1><b>Kanban Board</b></h1>
       <button style={{ backgroundColor: 'yellow' }}>ADD APPUNIK FORM</button>
+      <button style={{ backgroundColor: 'lightgreen' }}>test</button>
     </header>
   );
 }
