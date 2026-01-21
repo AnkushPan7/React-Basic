@@ -1,12 +1,12 @@
-```javascript
+```jsx
 import React from 'react';
-import Footer from './components/Footer'; // Adjust path if necessary
 
 function App() {
   return (
-    <div className="App">
-      {/* Your other components */}
-      <Footer />
+    <div>
+      <button style={{ backgroundColor: 'green', borderRadius: '100px', color: 'white', padding: '10px 20px', border: 'none' }}>
+        Click Me
+      </button>
     </div>
   );
 }
