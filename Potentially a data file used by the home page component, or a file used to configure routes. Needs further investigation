@@ -1,0 +1,1 @@
+This requires manual inspection and correction of the identified JSON file.  Look for common errors like missing commas, incorrect quotes, or extra characters at the beginning of the file.  Use a JSON validator to help identify the specific issue.

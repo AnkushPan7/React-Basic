@@ -1,0 +1,1 @@
+Implement error handling around JSON.parse() calls to catch invalid JSON and log an error message.  Consider using a try-catch block.
