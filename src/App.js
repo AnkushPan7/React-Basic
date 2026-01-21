@@ -1,13 +1,11 @@
-```jsx
 import React from 'react';
 
 function App() {
   return (
-    <div>
-      <button style={{ color: 'green' }}>hello user</button>
+    <div className="App">
+      <button style={{ borderRadius: '100px' }}>hello</button>
     </div>
   );
 }
 
 export default App;
-```
