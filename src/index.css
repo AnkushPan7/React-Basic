@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root {
-  --font-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-sans: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   --color-bg: #0f172a;
   --color-text: #f8fafc;
   --color-primary: #38bdf8;
