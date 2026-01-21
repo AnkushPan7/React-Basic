@@ -1,35 +1,15 @@
-import React, { useState } from 'react';
-import './Sidebar.css';
+```javascript
+import React from 'react';
 
-const Sidebar = ({ isOpen, onClose }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
+const Sidebar = (props) => {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : 'closed'} ${isCollapsed ? 'collapsed' : ''}`}>
-      <div className="sidebar-header">
-        <h3>Navigation</h3>
-        <button className="close-button" onClick={onClose}>
-          &times;
-        </button>
-        <button className="collapse-button" onClick={toggleCollapse}>
-          {isCollapsed ? '>' : '<'}
-        </button>
-      </div>
-      <ul className="sidebar-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      <div className="sidebar-footer">
-        <p>&copy; 2024 My App</p>
-      </div>
+    <div style={{ ...props.style }}>
+      {/* Sidebar content */}
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content.</p>
     </div>
   );
 };
 
 export default Sidebar;
+```
