@@ -1,13 +1,25 @@
+// src/App.js
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import HomePage from './components/HomePage';
 
-function App() {
+const App = () => {
+  const handleHelloClick = () => {
+    // Redirect to the home page with a welcome message
+    window.location.href = '/home?message=Welcome%20to%20the%20Home%20Page!';
+  };
+
   return (
-    <div className="App">
-      <button style={{ backgroundColor: 'green', color: 'black', marginRight: '10px' }}>hello</button>
-      <button style={{ backgroundColor: 'red', color: 'white' }}>hello</button>
-    </div>
+    <Router>
+      <div>
+        <h1>Main App</h1>
+        <button onClick={handleHelloClick}>Hello</button>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
