@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import Sidebar from './components/Sidebar';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <Router>
       <div className="app-container">
-        <div className="content">
-          <Header />
+        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        <div className="content" style={{ marginLeft: isSidebarOpen ? '250px' : '80px', transition: 'margin-left 0.3s ease' }}>
+          <Header toggleSidebar={toggleSidebar} />
           <main className="main-content">
             <Routes>
               <Route path="/home" element={<HomePage />} />
