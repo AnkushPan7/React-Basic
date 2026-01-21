@@ -1,1 +1,1 @@
-Add the paths to the Node.js installation directory (e.g., C:\Program Files\nodejs) and the npm global modules directory (e.g., C:\Users\YourUsername\AppData\Roaming\npm) to the PATH environment variable.
+Add the Node.js installation directory (e.g., C:\Program Files\nodejs) to the system's PATH environment variable.
