@@ -18,6 +18,12 @@ function YourComponent({ buttonText = "Click Me!", backgroundColor = 'lightgray'
       >
         <b>{buttonText}</b>
       </button>
+      <button
+        style={{ backgroundColor: 'red', color: 'white', border: 'none', padding: '10px 20px', cursor: 'pointer', marginLeft: '10px' }}
+        onClick={onClick}
+      >
+        <b>{buttonText}</b>
+      </button>
     </div>
   );
 }
