@@ -1,0 +1,1 @@
+Inspect other configuration files in the project for JSON syntax errors. Use a JSON validator to ensure they are valid.  Look for missing commas, unclosed brackets, or incorrect data types.

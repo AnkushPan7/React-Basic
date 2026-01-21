@@ -1,0 +1,9 @@
+```javascript
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', () => {
+  alert('You clicked!');
+});
+```
+
+Ensure the HTML contains a button with the id 'myButton'.

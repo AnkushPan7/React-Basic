@@ -1,1 +1,1 @@
-Add `react-router-dom` to the dependencies in package.json.  Example: `npm install react-router-dom`
+Ensure the file starts and ends with curly braces, and that all keys and values are properly quoted.  Remove any leading or trailing whitespace or invalid characters.
