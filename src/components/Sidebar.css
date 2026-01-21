@@ -1,19 +1,29 @@
 .sidebar {
   width: 250px;
   height: 100vh;
-  background-color: red;
+  background-color: green;
   color: #fff;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Ensure it's above other content */
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  transform: translateX(0); /* Initially visible */
 }
 
 .sidebar.hidden {
-  transform: translateX(-250px); /* Hide the sidebar off-screen */
+  transform: translateX(250px); /* Hide the sidebar off-screen */
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed h2,
+.sidebar.collapsed ul {
+  display: none;
 }
 
 .sidebar h2 {
@@ -47,7 +57,7 @@
 .toggleButton {
   position: fixed;
   top: 20px;
-  left: 270px; /* Position next to the sidebar when visible */
+  right: 270px; /* Position next to the sidebar when visible */
   background-color: #444;
   color: #fff;
   border: none;
@@ -55,20 +65,45 @@
   cursor: pointer;
   border-radius: 5px;
   z-index: 1001; /* Ensure it's above the sidebar */
-  transition: left 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
 }
 
 .toggleButton.sidebarHidden {
-  left: 20px; /* Position at the edge when sidebar is hidden */
+  right: 20px; /* Position at the edge when sidebar is hidden */
+}
+
+.toggleButton.sidebarCollapsed {
+  right: 80px;
 }
 
 /* Optional: Style for the content area to avoid overlap */
 .content {
-  margin-left: 250px; /* Adjust based on sidebar width */
+  margin-right: 250px; /* Adjust based on sidebar width */
   padding: 20px;
-  transition: margin-left 0.3s ease-in-out;
+  transition: margin-right 0.3s ease-in-out;
 }
 
 .content.sidebarHidden {
-  margin-left: 0;
+  margin-right: 0;
+}
+
+.content.sidebarCollapsed {
+  margin-right: 60px;
+}
+
+.collapseButton {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+.collapseButton:hover {
+  background-color: #666;
 }

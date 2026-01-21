@@ -13,9 +13,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <button onClick={toggleSidebar}>Toggle Sidebar</button>
-      {isSidebarVisible && <Sidebar />}
-      <div className="content">
+      <div className={`content ${isSidebarVisible ? 'sidebar-open' : ''}`}>
         <Header />
         <main className="main-content">
           <p>Main content area.</p>
@@ -24,6 +22,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <Sidebar isOpen={isSidebarVisible} onClose={toggleSidebar} />
     </div>
   );
 }
