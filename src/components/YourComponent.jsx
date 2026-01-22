@@ -9,11 +9,11 @@ import PropTypes from 'prop-types';
  * @param {function} onClick - A function to be called when the button is clicked.  Defaults to a console log.
  * @returns {JSX.Element} A div containing a button.
  */
-function YourComponent({ buttonText = "Click Me!", backgroundColor = 'lightgray', onClick = () => console.log("Button Clicked!") }) {
+function YourComponent({ buttonText = "Click Me!", backgroundColor = 'yellow', onClick = () => console.log("Button Clicked!") }) {
   return (
     <div>
       <button
-        style={{ backgroundColor: backgroundColor, border: 'none', padding: '10px 20px', cursor: 'pointer' }}
+        style={{ backgroundColor: backgroundColor, border: 'none', padding: '10px 20px', cursor: 'pointer', borderRadius: '100px' }}
         onClick={onClick}
       >
         <b>{buttonText}</b>

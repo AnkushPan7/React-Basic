@@ -19,7 +19,7 @@ const HomePage = () => {
         <p>Welcome! Please click the 'Hello' button to introduce yourself.</p>
       )}
       <p>Explore our amazing features and enjoy your stay.</p>
-      <button onClick={handleClick}>Click Me</button>
+      <button onClick={handleClick} style={{ backgroundColor: 'yellow', borderRadius: '100px' }}>Click Me</button>
       <div style={{ marginTop: '20px' }}>
         {/* Add more content here as needed */}
         <p>This is the home page content. You can add more sections, images, or interactive elements.</p>

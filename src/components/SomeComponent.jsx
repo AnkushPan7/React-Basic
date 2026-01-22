@@ -4,7 +4,7 @@ function SomeComponent() {
   return (
     <div>
       {/* Existing content */}
-      <button style={{ backgroundColor: 'lightgray' }}><b>REGISTER HERE</b></button>
+      <button style={{ backgroundColor: 'yellow', borderRadius: '100px' }}><b>REGISTER HERE</b></button>
     </div>
   );
 }
