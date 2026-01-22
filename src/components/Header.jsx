@@ -10,6 +10,10 @@ function Header() {
     alert('Hello from the header!');
   };
 
+  const handleNewHelloClick = () => {
+    alert('New Hello Button Clicked!');
+  };
+
   return (
     <header style={{ backgroundColor: 'lightblue', padding: '20px', textAlign: 'center' }}>
       <h1>Welcome to My App</h1>
@@ -24,6 +28,9 @@ function Header() {
         Demo Button
       </button>
       <button onClick={handleHelloClick} style={{ backgroundColor: 'purple', color: 'white', borderRadius: '100px', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
+        hello
+      </button>
+      <button onClick={handleNewHelloClick} style={{ backgroundColor: 'orange', color: 'white', borderRadius: '100px', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
         hello
       </button>
     </header>
