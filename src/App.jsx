@@ -1,12 +1,9 @@
-import React from 'react';
-import './App.css'; // Assuming you have a global CSS file
+import '@fontsource/oswald'; // Import the Oswald font
 
 function App() {
   return (
-    <div className="App">
+    <div style={{ fontFamily: 'Oswald, sans-serif' }}>
       {/* Your application content */}
     </div>
   );
 }
-
-export default App;
