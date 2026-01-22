@@ -19,6 +19,7 @@ function Header() {
       <button onClick={handleDemoClick} style={{ backgroundColor: 'blue', color: 'white', borderRadius: '100px', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
         Demo Button
       </button>
+      <button style={{ backgroundColor: 'pink', color: 'white', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>hello</button>
     </header>
   );
 }
