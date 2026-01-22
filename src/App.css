@@ -1,46 +1,8 @@
-.app-container {
-  display: flex;
-  height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 
-.sidebar {
-  width: 200px;
-  background-color: orange;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: width 0.3s ease;
-}
-
-.sidebar.collapsed {
-  width: 0;
-  overflow: hidden;
+body {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
   padding: 0;
-}
-
-.content {
-  flex: 1;
-  font-family: inherit; /* Ensure font inheritance */
-}
-
-.main-content {
-  padding: 20px;
-}
-
-.App {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  height: 100vh;
-  font-family: 'Poppins', sans-serif;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle-button {
-  margin-bottom: 10px;
+  box-sizing: border-box;
 }
