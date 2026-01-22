@@ -9,6 +9,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     setSidebarColor('pink');
   };
 
+  const handleHelloClick = () => {
+    alert('Hello!');
+  };
+
   return (
     <div className={`sidebar ${isOpen ? '' : 'collapsed'}`} style={{ 
         width: isOpen ? '250px' : '80px', 
@@ -26,6 +30,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         {isOpen ? '<' : '>'}
       </button>
       <button onClick={handleClick} style={{ padding: '10px', textDecoration: 'none', color: 'black', display: 'block', textAlign: 'left', backgroundColor: 'white', border: 'none', width: '100%' }}>Click</button>
+      <button onClick={handleHelloClick} style={{ padding: '10px', textDecoration: 'none', color: 'black', display: 'block', textAlign: 'left', backgroundColor: 'white', border: 'none', width: '100%' }}>hello</button>
       <nav style={{ display: 'flex', flexDirection: 'column', padding: '10px' }}>
         <Link to="/home" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>Home</Link>
         <Link to="/" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>Main</Link>
