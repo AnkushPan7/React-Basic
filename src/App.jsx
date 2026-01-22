@@ -5,6 +5,7 @@ import Header from './components/Header';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import HomePage from './pages/HomePage';
+import Carousel from './components/Carousel';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -22,7 +23,7 @@ function App() {
           <main className="main-content">
             <Routes>
               <Route path="/home" element={<HomePage />} />
-              <Route path="/" element={<p>Main content area.</p>} />
+              <Route path="/" element={<><p>Main content area.</p><Carousel /></>} />
             </Routes>
             <hr />
             <p>More main content area.</p>
