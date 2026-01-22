@@ -1,3 +1,4 @@
-body {
-  font-family: 'Archivo Black', sans-serif;
+.button {
+  background-color: yellow;
+  border-radius: 100px;
 }

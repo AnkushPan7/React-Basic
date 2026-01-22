@@ -14,7 +14,7 @@ function Header() {
         ADD APPUNIK FORM
       </button>
       <Link to="/home">
-        <button style={{ backgroundColor: 'yellow', color: 'white', borderRadius: '100px' }}>hello</button>
+        <button style={{ backgroundColor: 'yellow', color: 'black', borderRadius: '100px', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>hello</button>
       </Link>
       <button onClick={handleDemoClick} style={{ backgroundColor: 'yellow', color: 'white', borderRadius: '100px', padding: '10px 20px', border: 'none', cursor: 'pointer' }}>
         Demo Button
