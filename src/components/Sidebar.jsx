@@ -13,7 +13,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     <div className={`sidebar ${isOpen ? '' : 'collapsed'}`} style={{ 
         width: isOpen ? '250px' : '80px', 
         transition: 'width 0.3s ease',
-        backgroundColor: sidebarColor,
+        backgroundColor: 'red',
+        color: 'green',
         borderRight: '1px solid #ddd',
         height: '100vh',
         position: 'fixed',
