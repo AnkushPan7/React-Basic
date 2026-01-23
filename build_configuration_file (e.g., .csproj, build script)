@@ -1,0 +1,1 @@
+Ensure that the build process is using the correct working directory, which should be 'D:\vibe-kanban\Vibe-kanban\backend-dotnet\Kanban.Api\..\repos\React-Basic'.  This might involve updating the build script or project configuration file.
