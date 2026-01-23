@@ -1,15 +1,13 @@
-// src/App.js
 import React from 'react';
-import Sidebar from './components/Sidebar';
 
 function App() {
+  const handleClick = () => {
+    alert('clicked');
+  };
+
   return (
-    <div style={{ display: 'flex' }}>
-      <Sidebar />
-      <div style={{ flex: 1 }}>
-        {/* Main content goes here */}
-        Main Content
-      </div>
+    <div>
+      <button onClick={handleClick}>hello user click</button>
     </div>
   );
 }
