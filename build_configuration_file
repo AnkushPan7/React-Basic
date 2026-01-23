@@ -1,1 +1,1 @@
-Ensure the build configuration specifies 'C:\Users\Ankush Panchal\Desktop\Vibe-kanban\Harsh-Kanban-board\backend-dotnet\Kanban.Api\..\repos\React-Basic' as the working directory for npm commands.
+Inspect the build configuration file (e.g., in the CI/CD pipeline or build script) and ensure that the working directory is correctly set to 'D:\vibe-kanban\Vibe-kanban\backend-dotnet\Kanban.Api\..\repos\React-Basic'.
