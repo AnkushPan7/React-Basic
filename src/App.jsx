@@ -15,14 +15,15 @@ function App() {
 
   return (
     <Router>
-      <div style={{ fontFamily: 'Oswald, sans-serif' }}>
+      <div style={{ fontFamily: 'Oswald, sans-serif', display: 'flex' }}>
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div style={{
           marginLeft: isSidebarOpen ? '250px' : '80px',
           transition: 'margin-left 0.3s ease',
           minHeight: '100vh',
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          width: '100%'
         }}>
           <Header />
           <div style={{ flex: 1, padding: '20px', paddingBottom: '80px' }}>
