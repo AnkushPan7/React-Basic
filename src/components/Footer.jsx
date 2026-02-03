@@ -13,6 +13,7 @@ const Footer = () => {
     }}>
       <p>&copy; 2024 My App. All rights reserved.</p>
       <p>This is a footer with some dummy text.</p>
+      <button>Hello User</button>
     </footer>
   );
 };

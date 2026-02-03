@@ -1,1 +1,1 @@
-Add the Node.js installation directory (e.g., C:\Program Files\nodejs) to the system's PATH environment variable.
+Add the path to the npm executable (usually C:\Program Files\nodejs or similar) to the PATH variable.
