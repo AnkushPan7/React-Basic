@@ -1,37 +1,71 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { NavLink } from 'react-router-dom';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
-  const [sidebarColor, setSidebarColor] = useState('yellow');
+const Sidebar = ({ items = [], collapsed = false }) => {
+  const [activeItem, setActiveItem] = useState(null);
+  const [isCollapsed, setIsCollapsed] = useState(collapsed);
 
-  const handleClick = () => {
-    alert('Button Clicked!');
-    setSidebarColor('pink');
+  useEffect(() => {
+    setIsCollapsed(collapsed);
+  }, [collapsed]);
+
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
+
+  const renderItems = () => {
+    return items.map((item, idx) => (
+      <li key={idx}>
+        <NavLink
+          to={item.href}
+          className={classNames({ active: item.active || activeItem === item })}
+          onClick={() => handleItemClick(item)}
+        >
+          {item.label}
+        </NavLink>
+      </li>
+    ));
+  };
+
+  const handleCollapseToggle = () => {
+    setIsCollapsed(!isCollapsed);
   };
 
   return (
-    <div className={`sidebar ${isOpen ? '' : 'collapsed'}`} style={{ 
-        width: isOpen ? '250px' : '80px', 
-        transition: 'width 0.3s ease',
-        backgroundColor: sidebarColor,
-        borderRight: '1px solid #ddd',
-        height: '100vh',
-        position: 'fixed',
-        left: 0,
-        top: 0,
-        overflowX: 'hidden',
-        paddingTop: '60px'
-    }}>
-      <button onClick={toggleSidebar} className="toggle-button" style={{ position: 'absolute', top: '10px', right: '10px' }}>
-        {isOpen ? '<' : '>'}
-      </button>
-      <button onClick={handleClick} style={{ padding: '10px', textDecoration: 'none', color: 'black', display: 'block', textAlign: 'left', backgroundColor: 'white', border: 'none', width: '100%' }}>Click</button>
-      <nav style={{ display: 'flex', flexDirection: 'column', padding: '10px' }}>
-        <Link to="/home" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>Home</Link>
-        <Link to="/" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>Main</Link>
+    <aside
+      className={classNames('sidebar', { collapsed: isCollapsed })}
+      aria-label="Sidebar"
+    >
+      <nav>
+        <ul>{renderItems()}</ul>
       </nav>
-    </div>
+      <button
+        type="button"
+        className="collapse-toggle"
+        onClick={handleCollapseToggle}
+      >
+        {isCollapsed ? 'Expand' : 'Collapse'}
+      </button>
+    </aside>
   );
+};
+
+Sidebar.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      active: PropTypes.bool,
+    })
+  ),
+  collapsed: PropTypes.bool,
+};
+
+Sidebar.defaultProps = {
+  items: [],
+  collapsed: false,
 };
 
 export default Sidebar;
