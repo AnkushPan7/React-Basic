@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test user</title>
+  <script>
+    (function(){
+      document.title = 'test user';
+      // Keep title in sync on history/navigation events typical in SPAs
+      window.addEventListener('popstate', function(){ document.title = 'test user'; });
+      // If History.pushState used by router, refresh on pushState as well
+      var pushState = history.pushState;
+      history.pushState = function(){
+        var ret = pushState.apply(history, arguments);
+        document.title = 'test user';
+        return ret;
+      };
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
