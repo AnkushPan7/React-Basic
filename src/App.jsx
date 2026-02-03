@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div style={{ fontFamily: 'Oswald, sans-serif' }}>
-        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} style={{ backgroundColor: 'green' }} />
         <div style={{
           marginLeft: isSidebarOpen ? '250px' : '80px',
           transition: 'margin-left 0.3s ease',
