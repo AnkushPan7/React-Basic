@@ -1,0 +1,64 @@
+/* 
+  Styles for the application layout, including the sidebar and content areas.
+  Ensures a clean two-column layout with responsive behavior.
+*/
+
+/* Global app layout styles */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 260px;
+  background: #111;
+  color: #fff;
+  padding: 1rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar link styles */
+.sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+/* Active sidebar link styles */
+.sidebar a.active {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Content area styles */
+.content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    padding: 1rem;
+  }
+}
+
+/* Responsive adjustments for extra small screens */
+@media (max-width: 600px) {
+  .content {
+    padding: 0.5rem;
+  }
+}
