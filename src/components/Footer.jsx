@@ -1,6 +1,10 @@
 import React from 'react';
 
 const Footer = () => {
+  const handleClick = () => {
+    console.log('Button clicked');
+  };
+
   return (
     <footer style={{ 
       backgroundColor: 'lightgray',
@@ -13,6 +17,7 @@ const Footer = () => {
     }}>
       <p>&copy; 2024 My App. All rights reserved.</p>
       <p>This is a footer with some dummy text.</p>
+      <button onClick={handleClick}>userclick</button>
     </footer>
   );
 };
