@@ -1,0 +1,20 @@
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around; /* Or space-between, space-evenly, etc. */
+  align-items: center; /* Optional: Vertically align items */
+}
+
+.button-container button {
+  margin: 0 10px; /* Optional: Add some spacing between buttons */
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
