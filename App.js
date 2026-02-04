@@ -1,1 +1,1 @@
-<div className='sidebar'></div>
+Ensure all JSON objects are parsed with try-catch blocks to handle any potential parsing errors.
