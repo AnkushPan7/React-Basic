@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import HelloUserButton from './components/HelloUserButton';
 import '@fontsource/oswald';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         }}>
           <Header />
           <div style={{ flex: 1, padding: '20px', paddingBottom: '80px' }}>
+            <HelloUserButton />
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/home" element={<HomePage />} />
