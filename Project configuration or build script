@@ -1,0 +1,1 @@
+Check the project's build script or configuration to ensure the working directory is set to the correct path before attempting to run npm. For example, the working directory should be set to 'D:\vibe-kanban\Vibe-kanban\backend-dotnet\Kanban.Api\..\repos\React-Basic' if that's where the package.json is located.
