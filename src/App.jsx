@@ -16,22 +16,26 @@ function App() {
   return (
     <Router>
       <div style={{ fontFamily: 'Oswald, sans-serif' }}>
-        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div style={{
-          marginLeft: isSidebarOpen ? '250px' : '80px',
-          transition: 'margin-left 0.3s ease',
-          minHeight: '100vh',
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'row',
+          minHeight: '100vh'
         }}>
-          <Header />
-          <div style={{ flex: 1, padding: '20px', paddingBottom: '80px' }}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/home" element={<HomePage />} />
-            </Routes>
+          <div style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <Header />
+            <div style={{ flex: 1, padding: '20px', paddingBottom: '80px' }}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/home" element={<HomePage />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
+          <Sidebar style={{ backgroundColor: 'yellow' }} />
         </div>
       </div>
     </Router>
