@@ -1,0 +1,76 @@
+/* src/styles/sidebar.css */
+
+/**
+ * Styles for the Sidebar component.
+ */
+
+.sidebar {
+  /* Set the width and height of the sidebar */
+  width: 250px;
+  height: 100vh;
+  /* Background color and padding for the sidebar */
+  background-color: #f0f0f0;
+  padding: 20px;
+  /* Box shadow for a slight depth effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Position the sidebar fixed */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar ul {
+  /* Remove default list styling */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  /* Add some space between list items */
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  /* Remove underline from links and set color */
+  text-decoration: none;
+  color: #337ab7;
+  /* Transition effect on hover */
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  /* Change link color on hover */
+  color: #23527c;
+}
+
+.sidebar .nav-item {
+  /* Style for active or current navigation item */
+}
+
+.sidebar .nav-item.active {
+  /* Background color for active navigation item */
+  background-color: #e0e0e0;
+  /* Update link color for active navigation item */
+  color: #23527c;
+}
+
+.sidebar .nav-item .nav-link {
+  /* Additional styling for navigation links */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    /* Adjust sidebar width on smaller screens */
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    /* Further adjust sidebar width on even smaller screens */
+    width: 150px;
+  }
+}
