@@ -1,0 +1,87 @@
+/* src/styles/app.css */
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.sidebar a:hover {
+  color: #23527c;
+}
+
+/* App Layout Styles */
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+.app main {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 200px; /* Match the sidebar width */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 150px;
+  }
+  
+  .app main {
+    margin-left: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  
+  .app {
+    flex-direction: column;
+  }
+  
+  .app main {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
