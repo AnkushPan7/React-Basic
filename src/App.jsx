@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
+import NewSidebar from './components/NewSidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div style={{ fontFamily: 'Oswald, sans-serif' }}>
-        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        <NewSidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div style={{
           marginLeft: isSidebarOpen ? '250px' : '80px',
           transition: 'margin-left 0.3s ease',
