@@ -1,0 +1,59 @@
+.basic-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.basic-button:hover {
+  background-color: #0056b3;
+}
+
+.basic-button:active {
+  transform: translateY(2px);
+}
+
+.basic-button:disabled {
+  background-color: #66d9ff;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.basic-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #51a7e8;
+}
+
+.basic-button.variant-primary {
+  background-color: #007bff;
+}
+
+.basic-button.variant-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.basic-button.variant-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.basic-button.variant-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.basic-button.variant-warning {
+  background-color: #ffc107;
+  color: black;
+}
+
+.basic-button.variant-info {
+  background-color: #17a2b8;
+  color: white;
+}
