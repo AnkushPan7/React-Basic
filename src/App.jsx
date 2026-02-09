@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import TestPage from './pages/TestPage'; // Import TestPage
 import '@fontsource/oswald';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/home" element={<HomePage />} />
+              <Route path="/test" element={<TestPage />} /> // Add route for TestPage
             </Routes>
           </div>
           <Footer />
