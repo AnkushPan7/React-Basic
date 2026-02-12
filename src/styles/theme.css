@@ -1,0 +1,73 @@
+/* src/styles/theme.css */
+
+/* Define default light theme variables */
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --border-radius: 6px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Define dark theme variables */
+[data-theme="dark"] {
+  --bg: #0b1020;
+  --fg: #e9e7f3;
+  --primary-color: #66d9ef;
+  --secondary-color: #272727;
+  --border-radius: 6px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Global styling */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  transition: background 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+  margin-left: 12px;
+  padding: 6px 10px;
+  border: 1px solid currentColor;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--secondary-color);
+  color: var(--fg);
+}
+
+/* Add some basic styling for focus and active states */
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: var(--box-shadow);
+}
+
+.theme-toggle:active {
+  transform: translateY(2px);
+}
+
+/* Media queries for better responsiveness */
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin-left: 6px;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
