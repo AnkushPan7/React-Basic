@@ -1,36 +1,42 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import './Sidebar.css';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
-  const [sidebarColor, setSidebarColor] = useState('yellow');
+/**
+ * Reusable Sidebar component with collapsible behavior and prop-driven navigation item list.
+ * 
+ * @param {Object[]} items - Array of navigation items
+ * @param {string} items.label - Label for the navigation item
+ * @param {string} items.href - Href for the navigation item
+ * @param {boolean} items.active - Whether the navigation item is active
+ * @returns {JSX.Element} The Sidebar component
+ */
+const Sidebar = ({ items = [] }) => {
+  const [open, setOpen] = useState(true);
 
-  const handleClick = () => {
-    alert('Button Clicked!');
-    setSidebarColor('pink');
-  };
+  const toggle = () => setOpen((prev) => !prev);
+
+  if (!items.length) {
+    return null; // or a default message
+  }
 
   return (
-    <div className={`sidebar ${isOpen ? '' : 'collapsed'}`} style={{ 
-        width: isOpen ? '250px' : '80px', 
-        transition: 'width 0.3s ease',
-        backgroundColor: sidebarColor,
-        borderRight: '1px solid #ddd',
-        height: '100vh',
-        position: 'fixed',
-        left: 0,
-        top: 0,
-        overflowX: 'hidden',
-        paddingTop: '60px'
-    }}>
-      <button onClick={toggleSidebar} className="toggle-button" style={{ position: 'absolute', top: '10px', right: '10px' }}>
-        {isOpen ? '<' : '>'}
-      </button>
-      <button onClick={handleClick} style={{ padding: '10px', textDecoration: 'none', color: 'black', display: 'block', textAlign: 'left', backgroundColor: 'white', border: 'none', width: '100%' }}>Click</button>
-      <nav style={{ display: 'flex', flexDirection: 'column', padding: '10px' }}>
-        <Link to="/home" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>Home</Link>
-        <Link to="/" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>Main</Link>
+    <aside className={`sidebar ${open ? 'open' : 'collapsed'}`} aria-label="Main navigation">
+      <div className="sidebar-header">
+        <button aria-label="Toggle sidebar" className="sidebar-toggle" onClick={toggle}>
+          {open ? '◀' : '▶'}
+        </button>
+        <span className="sidebar-title">Navigation</span>
+      </div>
+      <nav className="sidebar-nav" aria-label="Sidebar">
+        <ul>
+          {items.map((item, idx) => (
+            <li key={idx} className={item.active ? 'active' : ''}>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
       </nav>
-    </div>
+    </aside>
   );
 };
 
