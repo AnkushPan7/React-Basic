@@ -1,0 +1,73 @@
+/* src/styles/sidebar.css */
+
+/**
+ * Sidebar component styles
+ */
+
+.sidebar {
+  /* Set the width and height of the sidebar */
+  width: 250px;
+  height: 100vh;
+  /* Background color and padding for the sidebar */
+  background-color: #f0f0f0;
+  padding: 20px;
+  /* Box shadow for a subtle depth effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Position the sidebar fixed to the left */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Ensure the sidebar stays within the viewport */
+  z-index: 1;
+}
+
+.sidebar ul {
+  /* Remove default list styling */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  /* Add some space between list items */
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  /* Remove underline from links */
+  text-decoration: none;
+  /* Link color */
+  color: #337ab7;
+  /* Transition effect for hover */
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  /* Change link color on hover */
+  color: #23527c;
+}
+
+.sidebar a.active {
+  /* Style for active links */
+  color: #23527c;
+  font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    /* Reduce the width on smaller screens */
+    width: 200px;
+  }
+}
+
+/* Add some basic styling for nested lists */
+.sidebar ul ul {
+  /* Indent nested lists */
+  padding-left: 20px;
+}
+
+.sidebar ul ul li {
+  /* Reduce margin for nested list items */
+  margin-bottom: 5px;
+}
